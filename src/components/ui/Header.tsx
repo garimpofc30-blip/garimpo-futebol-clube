@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, ShoppingBag, Shield } from "lucide-react";
 
@@ -20,14 +21,14 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-brand-navyDark/95 backdrop-blur-md border-b border-brand-gold/20 text-white">
+    <header className="sticky top-0 z-50 bg-brand-navyDark/95 backdrop-blur-md border-b border-brand-gold/30 text-white shadow-xl">
       {/* Topbar rápida */}
       <div className="bg-brand-navy border-b border-white/5 py-1 text-xs text-slate-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <span>Garimpo Futebol Clube • Site Oficial</span>
           <div className="flex gap-4">
             <Link href="/admin" className="hover:text-brand-gold transition-colors flex items-center gap-1">
-              <Shield className="w-3 h-3" /> Painel Admin
+              <Shield className="w-3.5 h-3.5 text-brand-gold" /> Painel Admin
             </Link>
           </div>
         </div>
@@ -36,18 +37,26 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logo / Escudo */}
+          {/* Logo / Escudo Oficial */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 bg-gradient-to-br from-brand-gold to-brand-goldHover rounded-full flex items-center justify-center font-bold text-brand-navyDark shadow-lg shadow-brand-gold/20 border-2 border-white/10 group-hover:scale-105 transition-transform">
-              GFC
+            <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-brand-gold/50 shadow-lg shadow-brand-gold/20 group-hover:scale-105 transition-transform duration-300 bg-brand-navy flex items-center justify-center">
+              {/* Salve o escudo na pasta public/images/escudo.png */}
+              <Image 
+                src="/images/escudo.png" 
+                alt="Escudo Garimpo F.C." 
+                width={56} 
+                height={56}
+                className="object-cover"
+                priority
+              />
             </div>
             <div>
-              <span className="block font-bold text-lg leading-none tracking-wider text-white">GARIMPO</span>
+              <span className="block font-bold text-xl leading-none tracking-wider text-white font-display">GARIMPO</span>
               <span className="text-xs tracking-widest text-brand-gold uppercase font-semibold">Futebol Clube</span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Navegação Desktop */}
           <nav className="hidden lg:flex items-center gap-6">
             {navigation.map((item) => (
               <Link
@@ -61,7 +70,7 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Actions & Mobile Menu Toggle */}
+          {/* Ações */}
           <div className="flex items-center gap-4">
             <Link
               href="/loja"
@@ -82,7 +91,7 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Menu Mobile */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-brand-navy border-b border-brand-gold/20 px-4 pt-2 pb-6 space-y-2">
           {navigation.map((item) => (
