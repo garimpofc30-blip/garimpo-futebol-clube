@@ -2,227 +2,188 @@
 <html lang="pt-BR">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Garimpo Futebol Clube | Site Oficial</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garimpo Futebol Clube | Site Oficial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-
-<div class="container">
-
-<div class="logo">
-
-<h2>GARIMPO FC</h2>
-
-</div>
-
-<nav>
-
-<a href="#">Início</a>
-
-<a href="#">O Clube</a>
-
-<a href="#">Futebol</a>
-
-<a href="#">Notícias</a>
-
-<a href="#">Patrocinadores</a>
-
-<a href="#">Galeria</a>
-
-<a href="#">Loja</a>
-
-<a href="#">Contato</a>
-
-</nav>
-
-</div>
-
-</header>
-
-<section class="hero">
-
-<div class="overlay"></div>
-
-<div class="hero-content">
-
-<h1>GARIMPO FUTEBOL CLUBE</h1>
-
-<p>
-
-Muito mais que um clube.<br>
-
-Um projeto que transforma vidas através do esporte.
-
-</p>
-
-<div class="botoes">
-
-<a href="#" class="btn">Conheça o Clube</a>
-
-<a href="#" class="btn2">Próximo Jogo</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="cards">
-
-<div class="titulo">
-
-<h2>ÚLTIMAS NOTÍCIAS</h2>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Primeira contratação oficial</h3>
-
-<p>
-
-O Garimpo FC anuncia seu primeiro reforço para a temporada.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Novo patrocinador</h3>
-
-<p>
-
-Mais uma empresa acredita no projeto do clube.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Comissão Técnica</h3>
-
-<p>
-
-A equipe segue sendo estruturada para a temporada.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="proximo-jogo">
-
-<h2>PRÓXIMO JOGO</h2>
-
-<div class="jogo">
-
-<div>
-
-<h3>GARIMPO FC</h3>
-
-</div>
-
-<div class="vs">
-
-VS
-
-</div>
-
-<div>
-
-<h3>ADVERSÁRIO</h3>
-
-</div>
-
-</div>
-
-<p>
-
-Domingo • 15h30
-
-</p>
-
-</section>
-
-<section class="sobre">
-
-<div class="texto">
-
-<h2>O CLUBE</h2>
-
-<p>
-
-O Garimpo Futebol Clube nasceu para representar nossa comunidade com dedicação, disciplina, união e paixão pelo futebol.
-
-Muito mais do que competir, queremos formar pessoas, inspirar jovens e construir uma história de orgulho dentro e fora de campo.
-
-</p>
-
-<a href="#" class="btn">
-
-Conheça nossa história
-
-</a>
-
-</div>
-
-</section>
-
-<section class="patrocinadores">
-
-<h2>PATROCINADORES</h2>
-
-<div class="logos">
-
-<div>LOGO</div>
-
-<div>LOGO</div>
-
-<div>LOGO</div>
-
-<div>LOGO</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<h3>GARIMPO FUTEBOL CLUBE</h3>
-
-<p>
-
-© 2026 Todos os direitos reservados.
-
-</p>
-
-</footer>
-
-<script src="js/script.js"></script>
-
+  <!-- HEADER / NAVEGAÇÃO -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h2>GARIMPO FC</h2>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+        ☰
+      </button>
+      <nav id="navMenu">
+        <a href="#inicio">Início</a>
+        <a href="#jogo">Próximo Jogo</a>
+        <a href="#clube">O Clube</a>
+        <a href="#elenco">Elenco</a>
+        <a href="#noticias">Notícias</a>
+        <a href="#patrocinadores">Patrocinadores</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>GARIMPO FUTEBOL CLUBE</h1>
+      <p>
+        Muito mais que um clube.<br>
+        Um projeto que transforma vidas através do esporte.
+      </p>
+      <div class="botoes">
+        <a href="#clube" class="btn">Conheça o Clube</a>
+        <a href="#jogo" class="btn2">Próximo Jogo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÓXIMO JOGO COM CONTAGEM REGRESSIVA -->
+  <section id="jogo" class="proximo-jogo">
+    <h2>PRÓXIMO CONFRONTO</h2>
+    <div class="jogo-card">
+      <div class="time">
+        <div class="escudo-placeholder">GFC</div>
+        <h3>GARIMPO FC</h3>
+      </div>
+      <div class="vs-container">
+        <span class="vs">VS</span>
+        <div id="countdown" class="countdown">Carregando...</div>
+      </div>
+      <div class="time">
+        <div class="escudo-placeholder">ADV</div>
+        <h3>ADVERSÁRIO</h3>
+      </div>
+    </div>
+    <div class="detalhes-jogo">
+      <p>📍 <strong>Estádio / Campo:</strong> Arena Municipal</p>
+      <p>📅 <strong>Data & Hora:</strong> Domingo • 15h30</p>
+    </div>
+  </section>
+
+  <!-- SEÇÃO ELENCO -->
+  <section id="elenco" class="elenco">
+    <div class="titulo">
+      <h2>NOSSO ELENCO</h2>
+      <p>Conheça os atletas que honram a camisa do Garimpo F.C.</p>
+    </div>
+    <div class="grid-elenco">
+      <div class="card-jogador">
+        <div class="numero">1</div>
+        <div class="foto-jogador">⚽</div>
+        <h3>Nome do Goleiro</h3>
+        <span class="posicao">Goleiro</span>
+      </div>
+      <div class="card-jogador">
+        <div class="numero">4</div>
+        <div class="foto-jogador">⚽</div>
+        <h3>Nome do Defensor</h3>
+        <span class="posicao">Zagueiro</span>
+      </div>
+      <div class="card-jogador">
+        <div class="numero">10</div>
+        <div class="foto-jogador">⚽</div>
+        <h3>Nome do Meia</h3>
+        <span class="posicao">Meio-Campo</span>
+      </div>
+      <div class="card-jogador">
+        <div class="numero">9</div>
+        <div class="foto-jogador">⚽</div>
+        <h3>Nome do Atacante</h3>
+        <span class="posicao">Atacante</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- O CLUBE -->
+  <section id="clube" class="sobre">
+    <div class="texto">
+      <h2>O CLUBE</h2>
+      <p>
+        O Garimpo Futebol Clube nasceu para representar nossa comunidade com dedicação, disciplina, união e paixão pelo futebol.
+        Muito mais do que competir, queremos formar pessoas, inspirar jovens e construir uma história de orgulho dentro e fora de campo.
+      </p>
+    </div>
+  </section>
+
+  <!-- ÚLTIMAS NOTÍCIAS -->
+  <section id="noticias" class="cards">
+    <div class="titulo">
+      <h2>ÚLTIMAS NOTÍCIAS</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Primeira contratação oficial</h3>
+        <p>O Garimpo FC anuncia seu primeiro reforço para a temporada.</p>
+      </div>
+      <div class="card">
+        <h3>Novo patrocinador</h3>
+        <p>Mais uma empresa acredita no projeto do clube.</p>
+      </div>
+      <div class="card">
+        <h3>Comissão Técnica</h3>
+        <p>A equipe segue sendo estruturada para a temporada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PATROCINADORES -->
+  <section id="patrocinadores" class="patrocinadores">
+    <h2>PATROCINADORES</h2>
+    <div class="logos">
+      <div>LOGO 1</div>
+      <div>LOGO 2</div>
+      <div>LOGO 3</div>
+      <div>LOGO 4</div>
+    </div>
+  </section>
+
+  <!-- CONTATO & SEJA PATROCINADOR -->
+  <section id="contato" class="contato">
+    <div class="titulo">
+      <h2>FALE COM O GARIMPO F.C.</h2>
+      <p>Dúvidas, peneiras, parcerias ou deseja patrocinar o clube? Envie uma mensagem!</p>
+    </div>
+    <form action="https://formspree.io/f/SEU_ID_HERE" method="POST" class="form-contato">
+      <div class="form-group">
+        <input type="text" name="nome" placeholder="Seu Nome Completo" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Seu E-mail" required>
+      </div>
+      <div class="form-group">
+        <select name="assunto" required>
+          <option value="" disabled selected>Selecione o Assunto</option>
+          <option value="Patrocínio">Quero ser um Patrocinador</option>
+          <option value="Atleta">Inscrição / Peneira</option>
+          <option value="Imprensa">Imprensa / Contato Geral</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+      </div>
+      <button type="submit" class="btn">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <h3>GARIMPO FUTEBOL CLUBE</h3>
+    <p>© 2026 Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
-
 </html>
