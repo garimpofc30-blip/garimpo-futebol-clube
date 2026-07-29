@@ -1,26 +1,20 @@
-import { Header } from "@/components/ui/Header";
-import { HeroBanner } from "@/components/ui/HeroBanner";
-import { NextMatch } from "@/components/ui/NextMatch";
+"use client";
+
+import { Header } from "@/components/layout/Header";
+import { HeroBanner } from "@/components/modules/hero/HeroBanner";
+import { NextMatch } from "@/components/modules/match/NextMatch";
+import { useNextMatch } from "@/hooks/useMatches";
 
 export default function HomePage() {
+  const { match, loading } = useNextMatch();
+
   return (
-    <main className="min-h-screen bg-brand-navyDark text-white">
+    <div className="min-h-screen bg-brand-navyDark text-white">
       <Header />
-      <HeroBanner />
-      {/* Exemplo de dados para o próximo jogo */}
-      <NextMatch 
-        match={{
-          id: "1",
-          homeTeam: "Garimpo F.C.",
-          homeLogo: "/images/escudo.png",
-          awayTeam: "Rival F.C.",
-          awayLogo: "",
-          date: "15 de Agosto",
-          time: "16:00",
-          stadium: "Estádio Municipal",
-          competition: "Campeonato Regional"
-        }} 
-      />
-    </main>
+      <main>
+        <HeroBanner />
+        {!loading && match && <NextMatch match={match} />}
+      </main>
+    </div>
   );
 }
